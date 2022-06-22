@@ -6,6 +6,6 @@ set machine=%gpo%\Machine\Registry.pol
 set user=%gpo%\User\Registry.pol
 
 pushd %~dp0
-bin\LGPO.exe /q /parse /m %machine% > lgpo-machine-test.gpo.txt
-bin\LGPO.exe /q /parse /u %user% > lgpo-user-test.gpo.txt
+bin\LGPO.exe /q /parse /m %machine% > lgpo-machine-output.gpo.txt
+bin\LGPO.exe /q /parse /u %user% > lgpo-user-output.gpo.txt
 popd

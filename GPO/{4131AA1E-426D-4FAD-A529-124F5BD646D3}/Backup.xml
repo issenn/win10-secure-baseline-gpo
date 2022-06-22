@@ -24,9 +24,9 @@
       <FSObjectDir bkp:Path="%GPO_MACH_FSPATH%\Scripts\Shutdown" bkp:SourceExpandedPath="\\DC01.contoso.test\sysvol\contoso.test\Policies\{FACCA114-6E57-4027-AB08-D891F66A4A24}\Machine\Scripts\Shutdown" bkp:Location="DomainSysvol\GPO\Machine\Scripts\Shutdown"/>
       <FSObjectDir bkp:Path="%GPO_MACH_FSPATH%\Scripts\Startup" bkp:SourceExpandedPath="\\DC01.contoso.test\sysvol\contoso.test\Policies\{FACCA114-6E57-4027-AB08-D891F66A4A24}\Machine\Scripts\Startup" bkp:Location="DomainSysvol\GPO\Machine\Scripts\Startup"/>
       <FSObjectFile bkp:Path="%GPO_USER_FSPATH%\comment.cmtx" bkp:SourceExpandedPath="\\DC01.contoso.test\sysvol\contoso.test\Policies\{FACCA114-6E57-4027-AB08-D891F66A4A24}\User\comment.cmtx" bkp:Location="DomainSysvol\GPO\User\comment.cmtx"/>
-			<FSObjectDir bkp:Path="%GPO_USER_FSPATH%\Scripts" bkp:SourceExpandedPath="\\DC01.contoso.test\sysvol\contoso.test\Policies\{FACCA114-6E57-4027-AB08-D891F66A4A24}\User\Scripts" bkp:Location="DomainSysvol\GPO\User\Scripts"/>
-			<FSObjectDir bkp:Path="%GPO_USER_FSPATH%\Scripts\Logoff" bkp:SourceExpandedPath="\\DC01.contoso.test\sysvol\contoso.test\Policies\{FACCA114-6E57-4027-AB08-D891F66A4A24}\User\Scripts\Logoff" bkp:Location="DomainSysvol\GPO\User\Scripts\Logoff"/>
-			<FSObjectDir bkp:Path="%GPO_USER_FSPATH%\Scripts\Logon" bkp:SourceExpandedPath="\\DC01.contoso.test\sysvol\contoso.test\Policies\{FACCA114-6E57-4027-AB08-D891F66A4A24}\User\Scripts\Logon" bkp:Location="DomainSysvol\GPO\User\Scripts\Logon"/>
+      <FSObjectDir bkp:Path="%GPO_USER_FSPATH%\Scripts" bkp:SourceExpandedPath="\\DC01.contoso.test\sysvol\contoso.test\Policies\{FACCA114-6E57-4027-AB08-D891F66A4A24}\User\Scripts" bkp:Location="DomainSysvol\GPO\User\Scripts"/>
+      <FSObjectDir bkp:Path="%GPO_USER_FSPATH%\Scripts\Logoff" bkp:SourceExpandedPath="\\DC01.contoso.test\sysvol\contoso.test\Policies\{FACCA114-6E57-4027-AB08-D891F66A4A24}\User\Scripts\Logoff" bkp:Location="DomainSysvol\GPO\User\Scripts\Logoff"/>
+      <FSObjectDir bkp:Path="%GPO_USER_FSPATH%\Scripts\Logon" bkp:SourceExpandedPath="\\DC01.contoso.test\sysvol\contoso.test\Policies\{FACCA114-6E57-4027-AB08-D891F66A4A24}\User\Scripts\Logon" bkp:Location="DomainSysvol\GPO\User\Scripts\Logon"/>
     </GroupPolicyExtension>
   </GroupPolicyObject>
 </GroupPolicyBackupScheme>
