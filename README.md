@@ -43,4 +43,6 @@ References
 
 ---
 
-> [LGPO.exe - Local Group Policy Object Utility](https://docs.microsoft.com/en-us/archive/blogs/secguide/lgpo-exe-local-group-policy-object-utility-v1-0)
+> [How to change group policy via command line?](https://stackoverflow.com/questions/39834069/how-to-change-group-policy-via-command-line)  
+> [LGPO.exe - Local Group Policy Object Utility](https://docs.microsoft.com/en-us/archive/blogs/secguide/lgpo-exe-local-group-policy-object-utility-v1-0)  
+> [gpupdate](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/gpupdate)  

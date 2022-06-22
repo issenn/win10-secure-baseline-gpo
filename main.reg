@@ -1,0 +1,78 @@
+Windows Registry Editor Version 5.00
+
+
+; Control Panel / 控制面板
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Device Metadata]
+; "PreventDeviceMetadataFromNetwork"=dword:00000000
+"PreventDeviceMetadataFromNetwork"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DriverSearching]
+; "DontSearchWindowsUpdate"=dword:00000001
+; "SearchOrderConfig"=dword:00000001
+; "SearchOrderConfig"=-
+"SearchOrderConfig"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update]
+; "AUOptions"=dword:00000001
+"AUOptions"=-
+
+; Group Policy / 组策略
+
+; https://superuser.com/questions/541826/registry-key-setting-to-enable-windows-to-download-driver-from-windows-update
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Device Metadata]
+; https://admx.help/?Category=Windows_10_2016&Policy=Microsoft.Policies.DeviceSoftwareSetup::DeviceMetadata_PreventDeviceMetadataFromNetwork
+; 禁止从 Internet 进行设备元数据检索
+; Prevent device metadata retrieval from the Internet
+; Optional:
+; PreventDeviceMetadataFromNetwork 0 = enhanced icons enabled
+; PreventDeviceMetadataFromNetwork 1 = enhanced icons disabled
+; 启动此策略设置会覆盖 控制面板的 SearchOrderConfig
+; 关闭自动安装设备（设备管理器的图片）
+"PreventDeviceMetadataFromNetwork"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DriverSearching]
+; https://admx.help/?Category=Windows_10_2016&Policy=Microsoft.Policies.InternetCommunicationManagement::DriverSearchPlaces_DontSearchWindowsUpdate
+; 关闭 Windows 更新设备驱动程序搜索
+; Turn off Windows Update device driver searching
+; 关闭 Windows Update 设备驱动程序搜索 已启用  ; 由 组策略的 SearchOrderConfig 取代
+; "DontSearchWindowsUpdate"=dword:00000001
+; https://admx.help/?Category=Windows_10_2016&Policy=Microsoft.Policies.DeviceSoftwareSetup::DriverSearchPlaces_SearchOrderConfiguration
+; 指定设备驱动程序源位置的搜索顺序
+; Specify search order for device driver source locations
+; Optional:
+; SearchOrderConfig 1 = "Always search Windows Update - Yes, do this automatically (recommended)"
+; SearchOrderConfig 2 = "Search Windows Update only if needed - No, let me choose what to do - Install driver software from Windows Update if it is not found on my computer."
+; SearchOrderConfig 0 = "Do not search Windows Update - No, let me choose what to do - Never install driver software from Windows Update"
+; 新装设备首次进入系统不自动搜索安装驱动
+"SearchOrderConfig"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate]
+; https://admx.help/?Category=Windows_10_2016&Policy=Microsoft.Policies.WindowsUpdate::ExcludeWUDriversInQualityUpdate
+; Windows 更新不包括驱动程序
+; Do not include drivers with Windows Updates
+"ExcludeWUDriversInQualityUpdate"=dword:00000001
+; https://admx.help/?Category=Windows_10_2016&Policy=Microsoft.Policies.WindowsUpdate::TargetReleaseVersion
+; 选择目标功能更新版本
+; Select the target Feature Update version
+"TargetReleaseVersion"=dword:00000001
+"TargetReleaseVersionInfo"="21H2"
+"ProductVersion"="Windows 10"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MRT]
+; Windows更新不包括恶意软件删除工具
+"DontOfferThroughWUAU"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU]
+; https://admx.help/?Category=Windows_10_2016&Policy=Microsoft.Policies.WindowsUpdate::AutoUpdateCfg
+; 配置自动更新
+; Configure Automatic Updates
+; 将Windows Update自动更新调整为手动更新
+"NoAutoUpdate"=dword:00000001
+; "AUOptions"=dword:00000001
+"AUOptions"=-
+; https://admx.help/?Category=Windows_10_2016&Policy=Microsoft.Policies.WindowsUpdate::NoAutoRebootWithLoggedOnUsers_Title
+; 对于有已登录用户的计算机，计划的自动更新安装不执行重新启动
+; No auto-restart with logged on users for scheduled automatic updates installations
+"NoAutoRebootWithLoggedOnUsers"=dword:00000001
