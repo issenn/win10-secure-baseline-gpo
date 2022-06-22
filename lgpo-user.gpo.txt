@@ -1,0 +1,7 @@
+; ----------------------------------------------------------------------
+; PARSING User POLICY
+; Source file:  GPO\{4131AA1E-426D-4FAD-A529-124F5BD646D3}\DomainSysvol\GPO\User\Registry.pol
+
+; PARSING COMPLETED.
+; ----------------------------------------------------------------------
+

@@ -1,0 +1,22 @@
+; ----------------------------------------------------------------------
+; PARSING Computer POLICY
+; Source file:  GPO\{4131AA1E-426D-4FAD-A529-124F5BD646D3}\DomainSysvol\GPO\Machine\Registry.pol
+
+Computer
+SOFTWARE\Policies\Microsoft\Windows\Device Metadata
+PreventDeviceMetadataFromNetwork
+DWORD:1
+
+Computer
+SOFTWARE\Policies\Microsoft\Windows\DriverSearching
+DontSearchWindowsUpdate
+DWORD:1
+
+Computer
+SOFTWARE\Policies\Microsoft\Windows\DriverSearching
+SearchOrderConfig
+DWORD:0
+
+; PARSING COMPLETED.
+; ----------------------------------------------------------------------
+
