@@ -1,0 +1,27 @@
+Windows Registry Editor Version 5.00
+
+
+; Control Panel / 控制面板
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Device Metadata]
+; "PreventDeviceMetadataFromNetwork"=dword:00000000
+"PreventDeviceMetadataFromNetwork"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DriverSearching]
+; "DontSearchWindowsUpdate"=dword:00000001
+; "SearchOrderConfig"=dword:00000001
+; "SearchOrderConfig"=-
+"SearchOrderConfig"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update]
+; "AUOptions"=dword:00000001
+"AUOptions"=-
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings]
+"AllowAutoWindowsUpdateDownloadOverMeteredNetwork"=dword:00000000
+"RestartNotificationsAllowed2"=dword:00000000
+"PauseFeatureUpdatesStartTime"="9999-12-30T23:59:59Z"
+"PauseQualityUpdatesStartTime"="9999-12-30T23:59:59Z"
+"PauseUpdatesExpiryTime"="9999-12-30T23:59:59Z"
+"PauseFeatureUpdatesEndTime"="9999-12-30T23:59:59Z"
+"PauseQualityUpdatesEndTime"="9999-12-30T23:59:59Z"
